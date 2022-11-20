@@ -1,0 +1,10 @@
+SELECT name_bludo, image_bludo, name_ing, masse FROM `rec` INNER JOIN  `bludo` ON (`rec`.`id_bludo`=`bludo`.`id_bludo`)
+ INNER JOIN  `ing` ON (`rec`.`id_ing_r`=`ing`.`id_ing`)
+LIMIT 0, 3;
+
+
+---для вывода таблицы блюдо с поиском по названию ингредиента-----
+
+ select name_bludo, about_bludo, image_bludo from rec inner join bludo on (rec.id_bludo_r=bludo.id_bludo) inner join ing on (rec.id_ing_r=ing.id_ing) where ing.name_ing='макароны'
+LIMIT 0, 25;
+ 
